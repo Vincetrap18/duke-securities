@@ -23,8 +23,8 @@ export default function Contact() {
     setError("");
 
     try {
-      // Replace this URL with your actual API endpoint
-      const response = await fetch("/api/contact", {
+      // ✅ Netlify Function endpoint
+      const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -209,9 +209,7 @@ export default function Contact() {
                 ✅ Your message has been sent successfully!
               </p>
             )}
-            {error && (
-              <p className="text-red-400 text-sm mt-2">{error}</p>
-            )}
+            {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
           </form>
         </section>
 
