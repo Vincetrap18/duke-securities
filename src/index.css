@@ -2,18 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* App-wide helpers */
+/* ===============================
+   Global Reset & Base Styles
+=============================== */
+html,
+body,
+#root {
+  @apply min-h-screen w-full bg-gradient-to-b 
+         from-brand-blueDark via-brand-blue to-brand-blueDark 
+         text-gray-100 antialiased;
+}
+
+
+body {
+  @apply font-sans leading-relaxed;
+}
+
+* {
+  @apply box-border;
+}
+
+a {
+  @apply text-blue-400 hover:text-blue-300 hover:underline transition;
+}
+
+img {
+  @apply max-w-full h-auto block;
+}
+
+/* Smooth scroll & polished selection */
+html {
+  scroll-behavior: smooth;
+}
+::selection {
+  @apply bg-blue-700 text-white;
+}
+
+/* ===============================
+   Reusable Components
+=============================== */
 @layer components {
+  /* Container helpers */
   .container {
-    @apply max-w-6xl mx-auto px-4;
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
   }
+  .container-fluid {
+    @apply w-full px-4 md:px-6 lg:px-8;
+  }
+
+  /* Buttons */
   .btn {
-    @apply inline-flex items-center gap-2 px-4 py-2 rounded-xl2 font-medium shadow-soft border border-slate-200 hover:shadow transition;
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium 
+           shadow-sm border border-slate-600 bg-slate-800 text-gray-100
+           hover:bg-slate-700 hover:border-slate-500 transition-all duration-200;
   }
   .btn-primary {
-    @apply bg-brandRed text-white border-transparent hover:opacity-90;
+    @apply bg-brand-accent text-white border-transparent 
+          hover:bg-brand-blueLight hover:shadow-md;
   }
+
+  .btn-outline {
+    @apply border-brand-accent text-brand-accent 
+          hover:bg-brand-accent hover:text-white;
+  }
+  /* Card */
   .card {
-    @apply bg-white rounded-2xl shadow-soft border border-slate-100;
+    @apply bg-slate-800 rounded-xl shadow-md border border-slate-700 overflow-hidden;
+  }
+  .card-hover {
+    @apply transition-transform transform hover:-translate-y-1 hover:shadow-lg hover:border-blue-600;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-14 md:py-20;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-center mb-6 text-white;
+  }
+  .section-subtitle {
+    @apply text-base text-slate-300 text-center mb-10;
   }
 }

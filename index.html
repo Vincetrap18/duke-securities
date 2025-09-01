@@ -1,16 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
+    <meta
+      name="description"
+      content="Duke Securities Ltd — a tech-powered Angadia company modernizing wealth transfer, escrow, and crypto services across Africa."
+    />
+    <meta name="keywords" content="Duke Securities, Angadia, Wealth Transfer, Escrow, Crypto, Africa, Investment Security" />
+    <meta name="author" content="Duke Securities Ltd." />
+    <meta name="theme-color" content="#0A1F44" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Duke Securities Ltd — Modernizing Wealth Transfer & Investment Security" />
+    <meta property="og:description" content="Tech-powered Angadia company modernizing wealth transfer, escrow, and crypto services across Africa." />
+    <meta property="og:image" content="/logo.png" />
+    <meta property="og:url" content="https://dukesecurities.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Duke Securities Ltd — Modernizing Wealth Transfer & Investment Security" />
+    <meta name="twitter:description" content="Tech-powered Angadia company modernizing wealth transfer, escrow, and crypto services across Africa." />
+    <meta name="twitter:image" content="/logo.png" />
+
     <title>Duke Securities Ltd — Modernizing Wealth Transfer & Investment Security</title>
-    <meta name="description" content="Duke Securities Ltd — a tech-powered Angadia company modernizing wealth transfer, escrow, and crypto services across Africa." />
     <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="manifest" href="/manifest.json" />
   </head>
-  <body class="bg-slate-50 text-slate-800">
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <noscript>
+      <p class="text-center text-red-600 p-4">
+        JavaScript is required to run this application. Please enable it in your browser settings.
+      </p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
