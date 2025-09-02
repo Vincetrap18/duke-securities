@@ -23,8 +23,7 @@ export default function Contact() {
     setError("");
 
     try {
-      // ✅ Netlify Function endpoint
-      const response = await fetch("/.netlify/functions/contact", {
+      const response = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
