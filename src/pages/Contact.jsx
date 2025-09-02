@@ -1,4 +1,4 @@
-import { MapPin, Mail, Globe, Clock } from "lucide-react";
+import { MapPin, Mail, Globe, Clock, Phone } from "lucide-react";
 import { useState } from "react";
 
 export default function Contact() {
@@ -86,6 +86,10 @@ export default function Contact() {
                 <li className="flex items-center gap-3">
                   <Globe className="w-5 h-5 text-brand-accent" />
                   www.dukesecurities.com
+                </li>
+                <li className="flex items-center gap-3">
+                  <Phone className="w-5 h-5 text-brand-accent" />
+                  +44 7529464825
                 </li>
               </ul>
             </div>

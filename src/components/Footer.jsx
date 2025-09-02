@@ -1,4 +1,4 @@
-import { FaMapMarkerAlt, FaEnvelope, FaGlobe, FaLinkedin, FaTwitter, FaFacebookF } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaGlobe, FaLinkedin, FaTwitter, FaFacebookF, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -28,6 +28,9 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 hover:text-white transition">
               <FaGlobe /> www.dukesecurities.com
+            </li>
+            <li className="flex items-center gap-2 hover:text-white transition">
+              <FaPhone /> +44 7529464825
             </li>
           </ul>
         </div>
